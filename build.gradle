@@ -1,0 +1,38 @@
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.org.scoverage:gradle-scoverage:2.0.1"
+  }
+}
+
+plugins {
+  id "org.scoverage" version "2.0.1"
+  id 'scala'
+  id 'application'
+  id 'maven'
+}
+
+group = "org.hyperfour"
+version = "1.0.0"
+
+mainClassName = 'org.hyperfour.main.Main'
+
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.scalatest:scalatest_2.11:2.2.6'
+
+    scoverage 'org.scoverage:scalac-scoverage-plugin_2.11:1.1.0', 'org.scoverage:scalac-scoverage-runtime_2.11:1.1.0'
+}
