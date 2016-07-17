@@ -2,6 +2,6 @@ language: 'scala'
 scala:
   - 2.11.8
 script:
-  - ./gradlew clean test
+  - ./gradlew clean test checkScoverage
 notifications:
   - email: false
