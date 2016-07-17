@@ -40,3 +40,7 @@ dependencies {
 checkScoverage {
     minimumRate = 1.0
 }
+
+test.testLogging {
+    events "passed", "skipped", "failed"
+}
