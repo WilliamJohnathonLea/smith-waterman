@@ -5,8 +5,10 @@ package org.hyperfour.main
   */
 object Main {
 
+  // $COVERAGE-OFF$
   def main(args: Array[String]): Unit = {
     println("Hello world!")
   }
+  // $COVERAGE-ON$
 
 }
